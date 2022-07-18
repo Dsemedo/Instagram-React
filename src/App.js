@@ -3,9 +3,9 @@ import Body from './Body';
 
 export default function App() {
     return (
-        <div>
+        <div class="root">
             <Navbar />
-            <Body /> 
+            {/* <Body />  */}
         </div>
            
     );

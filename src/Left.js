@@ -3,10 +3,8 @@ import Posts from "./Posts";
 export default function Left(){
 
     return (
-      <div className="esquerda">
-
+      <div class="esquerda">
         <CaixaStories />
-        
       </div>
     )
 }
