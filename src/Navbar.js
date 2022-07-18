@@ -21,7 +21,7 @@ function LogoInstagram(){
     <div class="logo">
             <ion-icon name="logo-instagram"></ion-icon>
             <div class="separador"></div>
-            <img src="./img/logo.png" />
+            <img src="img/logo.png" />
     </div>
   )
 }
