@@ -1,4 +1,16 @@
 export default function Suggestions() {
+
+
+  let listaSugestoes = [{imagemSugestao:"assets/img/adorable_animals.svg", textoSugestao:"adorable_animals", statusUsuario: "Segue você"},
+
+  {imagemSugestao:"assets/img/razoesparaacreditar.svg", textoSugestao:"razoesparaacreditar", statusUsuario: "Novo no Instagram"},
+
+  {imagemSugestao:"assets/img/chibirdart.svg", textoSugestao:"chibirdart", statusUsuario: "Segue você"},
+
+  {imagemSugestao:"assets/img/bad.vibes.memes.svg", textoSugestao:"bad.vibes.memes", statusUsuario: "Segue você"},
+
+  {imagemSugestao:"assets/img/smallcutecats.svg", textoSugestao:"smallcutecats", statusUsuario: "Segue você"},]
+
   return (
 
     <div class="sugestoes">
@@ -7,15 +19,9 @@ export default function Suggestions() {
         <div>Ver tudo</div>
       </div>
 
-      <Sugestao imagemSugestao="assets/img/adorable_animals.svg" textoSugestao="adorable_animals" statusUsuario = "Segue você" />
-
-      <Sugestao imagemSugestao="assets/img/razoesparaacreditar.svg" textoSugestao="razoesparaacreditar" statusUsuario = "Novo no Instagram"/>
-
-      <Sugestao imagemSugestao="assets/img/chibirdart.svg" textoSugestao="chibirdart" statusUsuario = "Segue você"/>
-
-      <Sugestao imagemSugestao="assets/img/bad.vibes.memes.svg" textoSugestao="bad.vibes.memes" statusUsuario = "Segue você"/>
-
-      <Sugestao imagemSugestao="assets/img/smallcutecats.svg" textoSugestao="smallcutecats" statusUsuario = "Segue você" />
+      {listaSugestoes.map((ls) => <Sugestao imagemSugestao = {ls.imagemSugestao}
+      textoSugestao = {ls.textoSugestao}
+      statusUsuario = {ls.statusUsuario} />)}
     </div>
   )
 }
