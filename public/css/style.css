@@ -191,9 +191,16 @@ body {
   font-size: 24px;
 }
 
-.post .fundo .acoes div:first-child ion-icon {
-  margin-right: 6px;
+.post .fundo .acoes div {
+  margin-right: 10px;
+  display: flex;
+  flex-direction: row;
 }
+
+.cor-vermelha{
+  color: red;
+}
+
 
 .post .fundo .curtidas {
   display: flex;
@@ -310,9 +317,6 @@ body {
   display: none !important;
 }
 
-.colorido {
-  color: red;
-}
 
 @media (max-width: 935px) {
   .sidebar {

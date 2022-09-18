@@ -3,7 +3,7 @@ import { useState } from "react"
 
 
 export default function Posts() {
-  
+
 
   let postagens = [{ imagemUsuario: "assets/img/barked.svg", textoUsuario: "barked", imagemPost: "assets/img/dog.svg", imagemCurtida: "assets/img/adorable_animals.svg", textoCurtida: "adorable_animals" },
   { imagemUsuario: "assets/img/meowed.svg", textoUsuario: "meowed", imagemPost: "assets/img/gato-telefone.svg", imagemCurtida: "assets/img/respondeai.svg", textoCurtida: "respondeai" }]
@@ -27,18 +27,18 @@ function Post(props) {
 
   const [salvo, setSalvo] = useState(false);
 
-  function Colorir(){
+  function Colorir() {
     setCurtida(!curtida)
-    if(curtida == true){
-      setContador(contador + 1);
-      
-    } else {
+    if (curtida == true) {
       setContador(contador - 1);
-    }
-    
-      }
 
-  function Salvar(){
+    } else {
+      setContador(contador + 1);
+    }
+
+  }
+
+  function Salvar() {
     setSalvo(!salvo)
   }
 
@@ -60,15 +60,32 @@ function Post(props) {
 
       <div class="fundo">
         <div class="acoes">
-          <div>
-            
-            <ion-icon onClick={Colorir} name="heart-outline"></ion-icon>
-            <ion-icon name="chatbubble-outline"></ion-icon>
-            <ion-icon name="paper-plane-outline"></ion-icon>
+          <div className="botoes">
+            {curtida ? 
+            <div className="cor-vermelha">
+              <ion-icon onClick={Colorir} name="heart"></ion-icon>
+            </div> : 
+            <div>
+              <ion-icon onClick={Colorir} name="heart-outline"></ion-icon>
+            </div>}
+
+            <div>
+              <ion-icon name="chatbubble-outline"></ion-icon>
+            </div>
+
+            <div>
+              <ion-icon name="paper-plane-outline"></ion-icon>
+            </div>
+
           </div>
+          {salvo ? 
           <div>
-            <ion-icon onClick = {Salvar} name="bookmark-outline"></ion-icon>
-          </div>
+            <ion-icon onClick={Salvar} name="bookmark"></ion-icon>
+          </div> : 
+          
+          <div>
+            <ion-icon onClick={Salvar} name="bookmark-outline"></ion-icon>
+          </div>}
         </div>
 
         <div class="curtidas">
