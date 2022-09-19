@@ -22,7 +22,7 @@ export default function Posts() {
 
 function Post(props) {
 
-  const [contador, setContador] = useState(240.000)
+  const [contador, setContador] = useState(137)
   const [curtida, setCurtida] = useState(false);
 
   const [salvo, setSalvo] = useState(false);
